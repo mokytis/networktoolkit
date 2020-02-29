@@ -4,6 +4,11 @@ import requests
 
 
 def get_port_use_db():
+    """Gets the services that commonly run on certain ports
+
+    :return: dict[port] = service
+    :rtype: dict
+    """
     url = "http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.csv"
     db_path = "/tmp/port_db"
 
@@ -29,6 +34,14 @@ def get_port_use_db():
 
 
 def lookup_port_use(port):
+    """Find a service that commonly runs on a given port
+
+    :param port: Port to check
+    :type port: int
+
+    :return: Service that commonly runs on the given port
+    :rtype: str
+    """
     db = get_port_use_db()
     service = db.get(f"{port}", None)
     return service

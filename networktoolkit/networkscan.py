@@ -8,6 +8,8 @@ from networktoolkit import vendorlookup
 
 @dataclass
 class Client:
+    """Dataclass for a network client"""
+
     ip_addr: str
     mac_addr: str
     mac_vendor: str
@@ -27,6 +29,16 @@ def cli(ip_range, timeout, vendor):
 
 
 def get_clients(ip, t):
+    """Gets a list of accessable devices on the network in a given ip range
+
+    :param ip: ip range to scan
+    :param t: timeout (seconds)
+    :type t: int
+
+    :return: list of clients on network
+    :rtype: list(Client)
+    """
+
     arp_request = scapy.ARP(pdst=ip)
     broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
 

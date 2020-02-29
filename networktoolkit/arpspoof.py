@@ -7,6 +7,14 @@ from networktoolkit import networkscan
 
 
 def gen_arp_response(target_ip, spoof_ip):
+    """Generates an ARP Response packet
+
+    :param target_ip: ip address to send packet to
+    :param spoof_ip: ip address to spoof
+
+    :return: A scapy packet
+    """
+
     if scan_results := networkscan.scan(
         target_ip
     ):  # checks to see if the target is reachable on the network
@@ -21,6 +29,13 @@ def gen_arp_response(target_ip, spoof_ip):
 
 
 def arpspoof(target_ip, spoof_ip, bi_directional=False, delay=1):
+    """Spoof a given ip address by sending ARP Response packets
+
+    :param target_ip: ip address of target
+    :param spoof_ip: ip address to spoof
+    :param bi_directional: if True, also send ARP Responses to spoof_ip spoofing target_ip
+    :type bi_directional: bool
+    """
     packets = []
 
     click.echo(f"[+] Generating ARP Response (dest={target_ip} spoofing={spoof_ip}")

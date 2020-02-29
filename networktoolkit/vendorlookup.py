@@ -5,6 +5,11 @@ import requests
 
 
 def get_oui_db():
+    """Gets the vendors of common mac address OUIs
+
+    :return: dict[oui] = vendor
+    :rtype: dict
+    """
     url = "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob_plain;f=manuf;hb=HEAD"
     oui_db_path = "/tmp/oui_db"
 
@@ -31,6 +36,14 @@ def get_oui_db():
 
 
 def lookup_vendor(mac_address):
+    """Find the vendor for a given mac address
+
+    :param mac_address: Mac address to check the OUI of
+    :type mac_address: str
+
+    :return: Vendor of a given mac address
+    :rtype: str
+    """
     mac_address = mac_address.upper().replace("-", ":")
     if match := re.match(r"^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$", mac_address):
         db = get_oui_db()
