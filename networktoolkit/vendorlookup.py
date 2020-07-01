@@ -50,8 +50,11 @@ def lookup_vendor(mac_address):
         oui = mac_address[:8]
         vendor = db.get(oui, None)
         if vendor:
-            long_name = vendor.split("\t")[1]
-            return long_name
+            if vendor.find("\t") != -1:
+                long_name = vendor.split("\t")[1]
+                return long_name
+            else:
+                return vendor
         else:
             return None
     else:
