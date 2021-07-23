@@ -12,6 +12,7 @@ python = "^3.8"
 scapy = "^2.4.3"
 requests = "^2.23.0"
 Click = "^7.0"
+cryptography = "^3.4.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -24,6 +25,7 @@ vendorlookup = "networktoolkit.vendorlookup:cli"
 portuselookup = "networktoolkit.portuselookup:cli"
 networkscan = "networktoolkit.networkscan:cli"
 arpspoof = "networktoolkit.arpspoof:cli"
+showhosts = "networktoolkit.showhosts:cli"
 
 [build-system]
 requires = ["poetry>=0.12"]
