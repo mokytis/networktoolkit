@@ -249,21 +249,6 @@ optional = false
 python-versions = ">=3.5"
 
 [[package]]
-name = "NetfilterQueue"
-version = "0.8.1"
-description = "Python bindings for libnetfilter_queue"
-category = "main"
-optional = false
-python-versions = "*"
-develop = false
-
-[package.source]
-type = "git"
-url = "https://github.com/johnteslade/python-netfilterqueue"
-reference = "update-cython-code"
-resolved_reference = "51c230f0c6c9feb89dd2e2d6179f620390d3fc0d"
-
-[[package]]
 name = "packaging"
 version = "21.0"
 description = "Core utilities for Python packages"
@@ -586,7 +571,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "3593013c5a17fed6e07bc5481eb1026664f905b9b59e2fff1f4ed705c827b865"
+content-hash = "fbb8b334dd2eef6b6eee1e4e412595188658a24d3c105b23b634467a120e4fcb"
 
 [metadata.files]
 alabaster = [
@@ -766,7 +751,6 @@ more-itertools = [
     {file = "more-itertools-8.8.0.tar.gz", hash = "sha256:83f0308e05477c68f56ea3a888172c78ed5d5b3c282addb67508e7ba6c8f813a"},
     {file = "more_itertools-8.8.0-py3-none-any.whl", hash = "sha256:2cf89ec599962f2ddc4d568a05defc40e0a587fbc10d5989713638864c36be4d"},
 ]
-NetfilterQueue = []
 packaging = [
     {file = "packaging-21.0-py3-none-any.whl", hash = "sha256:c86254f9220d55e31cc94d69bade760f0847da8000def4dfe1c6b872fd14ff14"},
     {file = "packaging-21.0.tar.gz", hash = "sha256:7dc96269f53a4ccec5c0670940a4281106dd0bb343f47b7471f779df49c2fbe7"},
