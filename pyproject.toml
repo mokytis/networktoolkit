@@ -13,6 +13,7 @@ scapy = "^2.4.3"
 requests = "^2.23.0"
 Click = "^7.0"
 cryptography = "^3.4.7"
+netfilterqueue = {git = "https://github.com/johnteslade/python-netfilterqueue", rev = "update-cython-code"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
