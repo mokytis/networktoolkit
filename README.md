@@ -42,6 +42,6 @@ I would request that all contributed code is pep8 complient.
 
 ## Issues
 
-If anything is broke, you have a usage question, or a feature suggestion feel free to create an issue on gitlab.
+If anything is broke, you have a usage question, or a feature suggestion feel free to create an issue on github.
 
 
